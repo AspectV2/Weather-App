@@ -71,15 +71,10 @@ def sign_up_page():
     sign_up.geometry("540x540")
     sign_up.title("Sign up page")
 
-    sign_up_username = CTkEntry(sign_up)
-
+    sign_up_username = CTkEntry(sign_up, placeholder_text="Email")
     sign_up_username.place(relx=0.5, rely=0.4, anchor=CENTER)
-    sign_up_username_label = Label(sign_up, text="Email")
-    sign_up_username_label.place(relx=0.5, rely=0.35, anchor=CENTER)
-    sign_up_password = CTkEntry(sign_up, show="*")
-    sign_up_password_label = Label(sign_up, text="Password")
+    sign_up_password = CTkEntry(sign_up, show="*", placeholder_text="Email")
     sign_up_password.place(relx=0.5, rely=0.55, anchor=CENTER)
-    sign_up_password_label.place(relx=0.5, rely=0.5, anchor=CENTER)
 
     sign_up_button = CTkButton(sign_up, text="Sign Up", corner_radius=32, fg_color='#003185', hover_color='#024950', command=sign_up_task)
     sign_up_button.place(relx=0.5, rely=0.7, anchor=CENTER)
@@ -105,20 +100,15 @@ login_page = Tk()
 login_page.title("Login Page")
 login_page.geometry("540x540")
 
-login = CTkEntry(login_page)
-password = CTkEntry(login_page, show="*")
+login = CTkEntry(login_page, placeholder_text="Email")
+password = CTkEntry(login_page, show="*", placeholder_text="Password")
 enter = CTkButton(login_page, text="Login", command=login_task, corner_radius=32, fg_color='#003185', hover_color='#024950')
 sign_up = CTkButton(login_page, text="Don't have an account? Sign Up!", font=('Arial', 10), command=sign_up_page, fg_color='#003185', hover_color='#024950')
-# CHANGE FONT
 
-email = Label(login_page, text="Email")
-password_label = Label(login_page, text="Password")
 
 check_button = Checkbutton(login, text="show_password")
 sign_up.place(relx=0.03, rely=0.7, anchor=W)
 enter.place(relx=0.5, rely=0.7, anchor=CENTER)
-email.place(relx=0.5, rely=0.35, anchor=CENTER)
-password_label.place(relx=0.5, rely=0.5, anchor=CENTER)
 password.place(relx=0.5, rely=0.55, anchor=CENTER)
 login.place(relx=0.5, rely=0.4, anchor=CENTER)
 
